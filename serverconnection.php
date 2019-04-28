@@ -1,4 +1,5 @@
 <?php
+// CHANGE SERVERNAME TO MATCH THE NAME OF THE SQL SERVER YOU ARE CONNECTING TO
 $servername = "localhost";
 $username = "root";
 $password = "";
