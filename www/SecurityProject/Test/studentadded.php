@@ -10,8 +10,8 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "dmv";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Create dbcection
+$dbc = new mysqli($servername, $username, $password, $dbname);
 
 
 if(isset($_POST['submit'])){
@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
     } else {
 
         // Trim white space from the name and store the name
-        $f_name = trim($_POST['dl_id']);
+        $dl_id = trim($_POST['dl_id']);
 
     }
 
@@ -129,20 +129,21 @@ if(isset($_POST['submit'])){
     
     if(empty($data_missing)){
         
-        require_once('../serverconnection_update.php');
+        require_once('../sqli_connect.php');
         
         $query = "INSERT INTO person (dl_id, first, last,
         ssn, sex, eye_color, date_of_birth, height, weight) VALUES (?, ?, ?,
         ?, ?, ?, ?, ?, ?)";
+		
         
-        $stmt = mysqli_prepare($conn, $query);
+        $stmt = mysqli_prepare($dbc, $query);
         
         //i Integers
         //d Doubles
         //b Blobs
         //s Everything Else
         
-        mysqli_stmt_bind_param($stmt, "sssssssss",$dl_id,
+        mysqli_stmt_bind_param($stmt, "sssssssss", $dl_id,
                                $first, $last, $ssn, $sex,
                                $eye_color, $date_of_birth,$height,
                                $weight);
@@ -159,16 +160,16 @@ if(isset($_POST['submit'])){
             
             mysqli_stmt_close($stmt);
             
-            mysqli_close($conn);
+            mysqli_close($dbc);
             
         } else {
             
-            //echo 'Error Occurred<br />';
-            //echo mysqli_error();
+            echo 'Error Occurred<br />';
+            echo mysqli_error($dbc);
             
             mysqli_stmt_close($stmt);
             
-            mysqli_close($conn);
+            mysqli_close($dbc);
             
         }
         
@@ -188,7 +189,7 @@ if(isset($_POST['submit'])){
 
 ?>
 
-<form action="http://localhost/SecurityProject/Personadded.php" method="post">
+<form action="http://localhost/SecurityProject/Test/studentadded.php" method="post">
     
 <b>Add a New Person</b>
 
