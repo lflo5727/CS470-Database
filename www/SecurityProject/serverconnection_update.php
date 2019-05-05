@@ -3,25 +3,24 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
+$dbname = "dmv";
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-echo "You have successfully connected to the database";
+// echo "You have successfully connected to the database";
 //Fetch data
-$fetchdataquery = "SELECT firstname, lastname FROM TABLENAME";
+$fetchdataquery = 'SELECT * FROM person';
 $result = mysqli_query($conn,$fetchdataquery);
-if(mysqli_num_rows($result)>0){
-//fetch data
-while($row =mysqli_fetch_assoc($result)){
-echo "Name:".$row["firstname"]." ".$row["lastname"]." <br> ";
+
+while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){ 
+echo "ID:".$row["dl_id"]." ".$row["last"]." ".$row["ssn"]." ".$row["sex"]." ".$row["eye_color"]." ".$row["date_of_birth"]." ".$row["height"]." ".$row["weight"]." <br> ";
+//dl_id,first, last, ssn,sex, eye_color,date_of_birth,height,weight
+
 }
-}
-else{
-echo "No recod found <br>";
-}
+
 ?>
 
 <!DOCTYPE html>

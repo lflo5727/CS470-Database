@@ -3,6 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
+$dbname = "dmv";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -24,7 +25,7 @@ echo "You have successfully connected to the database";
 <div class="wrap">
    <div class="search">
       <input type="text" class="searchTerm" placeholder="Enter your query here!">
-      <button type="submit" class="searchButton">
+      <button type="submit" class="searchButton" name = "submit" value="Search" />>
         <i class="fa fa-search"></i>
      </button>
    </div>
