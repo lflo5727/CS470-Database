@@ -25,7 +25,6 @@ if($con->connect_error){
     echo 'Connection Faild: '.$con->connect_error;
     }else{
 		echo 'Connection Good';
-		echo query('Select * from Person');
         $sql="SELECT * from Person";
 
         $res=$con->query($sql);

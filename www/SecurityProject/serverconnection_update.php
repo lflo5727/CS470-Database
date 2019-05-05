@@ -1,5 +1,4 @@
 <?php
-// CHANGE SERVERNAME TO MATCH THE NAME OF THE SQL SERVER YOU ARE CONNECTING TO
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -16,7 +15,7 @@ $fetchdataquery = 'SELECT * FROM person';
 $result = mysqli_query($conn,$fetchdataquery);
 
 while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){ 
-echo "ID:".$row["dl_id"]." ".$row["last"]." ".$row["ssn"]." ".$row["sex"]." ".$row["eye_color"]." ".$row["date_of_birth"]." ".$row["height"]." ".$row["weight"]." <br> ";
+echo "ID:".$row["dl_id"]." ".$row["first"]." ".$row["last"]." ".$row["ssn"]." ".$row["sex"]." ".$row["eye_color"]." ".$row["date_of_birth"]." ".$row["height"]." ".$row["weight"]." <br> ";
 //dl_id,first, last, ssn,sex, eye_color,date_of_birth,height,weight
 
 }
@@ -32,12 +31,15 @@ echo "ID:".$row["dl_id"]." ".$row["last"]." ".$row["ssn"]." ".$row["sex"]." ".$r
 
 <div class="wrap">
    <div class="search">
+   <form action="serverconnection_update.php" method="post">
       <input type="text" class="searchTerm" placeholder="Enter your query here!">
-      <button type="submit" class="searchButton">
+      <button type="submit" class="searchButton" value="Search">
         <i class="fa fa-search"></i>
+		</form>
      </button>
    </div>
 </div>
+
 
 
 </body>
