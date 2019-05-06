@@ -3,7 +3,7 @@
 <title>Add Person</title>
 </head>
 <body>
-<form action="http://localhost/SecurityProject/Test/studentadded.php" method="post">
+<form action="http://localhost/SecurityProject/Test/personadded.php" method="post">
 
 <b>Add a New Person</b>
 
