@@ -83,35 +83,35 @@ create table address (
 
 
  insert into person(dl_id,first, last, ssn,sex, eye_color,date_of_birth,height,weight)
- values ('R123456789','John', 'Smith','123456789','M','Br','04/10/2019','6ft0"','100')
+ values ('R123456789','John', 'Smith','123456789','M','Br','2019/04/10','6ft0"','100');
 
  insert into person(dl_id,first, last, ssn,sex, eye_color,date_of_birth,height,weight)
- values ('R012345678','Amy', 'Jones','012345678','F','Gr','04/10/2019','5ft4"','150')
+ values ('R012345678','Amy', 'Jones','012345678','F','Gr','2019/04/10','5ft4"','150');
 
  insert into license_plate(number, handicap,status,owner_dl_id, vehicle_vin)
- values ('123456','0','0','R123456789','1234567890')
+ values ('123456','0','0','R123456789','1234567890');
 
  insert into license_plate(number, handicap,status,owner_dl_id, vehicle_vin)
- values ('JOHN','0','0','R123456789', '77777777')
+ values ('JOHN','0','0','R123456789', '77777777');
 
  insert into license_plate(number, handicap,status,owner_dl_id,vehicle_vin)
- values ('123','1','1','R012345678','1111111')
+ values ('123','1','1','R012345678','1111111');
 
 
  insert into vehicle(registered_drivers,owner_dl_id,vin,make,model,year, vehicle_type,license_plate)
- values ('Smith','R123456789','1234567890','Ford','Fusion','2016','sedan','123456')
+ values ('Smith','R123456789','1234567890','Ford','Fusion','2016','sedan','123456');
 
  insert into vehicle(registered_drivers,owner_dl_id,vin,make,model,year, vehicle_type,license_plate)
- values ('Smith','R123456789','77777777','Ford','F-150','2018','truck','JOHN')
+ values ('Smith','R123456789','77777777','Ford','F-150','2018','truck','JOHN');
 
  insert into vehicle(registered_drivers,owner_dl_id,vin,make,model,year, vehicle_type,license_plate)
- values ('Jones','R012345678','1111111','Subaru','Forester','2019','SUV','123')
+ values ('Jones','R012345678','1111111','Subaru','Forester','2019','SUV','123');
 
  insert into address(uid, county, house_number,zip_code,state,street,city,owner_dl_id)
- values('1','Jackson','123','64106','MO','Main St.','Kansas City','R123456789')
+ values('1','Jackson','123','64106','MO','Main St.','Kansas City','R123456789');
 
  insert into address(uid,county,house_number,zip_code,state,street,city,owner_dl_id)
- values('2','Boone','888','65203','MO','Walnut St.','Columbia','R012345678')
+ values('2','Boone','888','65203','MO','Walnut St.','Columbia','R012345678');
 
 
  /*get the name of all drivers who have an suv*/
