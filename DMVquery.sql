@@ -154,3 +154,5 @@ create table address (
  license_plate
  on license_plate.owner_dl_id=vehicle.owner_dl_id
  where vehicle.vehicle_type='SUV' and license_plate.number LIKE '12%';
+ 
+  Select DL_ID from Person;
