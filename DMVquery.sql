@@ -89,13 +89,13 @@ create table address (
  values ('R012345678','Amy', 'Jones','012345678','F','Gr','2019/04/10','5ft4"','150');
 
  insert into license_plate(number, handicap,status,owner_dl_id, vehicle_vin)
- values ('123456','0','0','R123456789','1234567890');
+ values ('123456',0,'0','R123456789','1234567890');
 
  insert into license_plate(number, handicap,status,owner_dl_id, vehicle_vin)
- values ('JOHN','0','0','R123456789', '77777777');
+ values ('JOHN',0,'0','R123456789', '77777777');
 
  insert into license_plate(number, handicap,status,owner_dl_id,vehicle_vin)
- values ('123','1','1','R012345678','1111111');
+ values ('123',1,'1','R012345678','1111111');
 
 
  insert into vehicle(registered_drivers,owner_dl_id,vin,make,model,year, vehicle_type,license_plate)
