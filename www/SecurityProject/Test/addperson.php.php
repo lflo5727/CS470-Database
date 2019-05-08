@@ -5,7 +5,7 @@
 <body>
 <form action="http://localhost/SecurityProject/Test/personadded.php" method="post">
 
-<b>Add a New Person</b>
+<h1 style="background-color:DodgerBlue;">Add a New Person</h1>
 
 <p>Drivers License ID:
 <input type="text" name="dl_id" size="10" maxlength="10" value="" />
@@ -44,7 +44,7 @@
 </p>
 
 <p>
-<input type="submit" name="submit" value="Send" />
+<input type="submit" name="submit" value="Submit" />
 </p>
 
 </form>
