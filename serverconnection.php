@@ -14,7 +14,7 @@ echo "You have successfully connected to the database";
 //Fetch data
 $keyword = $-GET("key");
 echo "Show all the information contains key word". $keyword. "<br>""
-$fetchdataquery = "SELECT * FROM person where first=".$keyword.;
+$fetchdataquery = "SELECT * FROM person where first ="."".$keyword;
 $result = mysqli_query($conn,$fetchdataquery);
 if(mysqli_num_rows($result)>0){
 //fetch data
